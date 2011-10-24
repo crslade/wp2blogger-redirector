@@ -24,7 +24,7 @@ use Rack::Rewrite do
   #Redirect the index page
   r301 %r{index.php}, root
   #Redirect the feed page
-  r301 %r{^/feed}, root+'/feeds/posts/default'
+  r301 %r{^/feed}, "#{root}/feeds/posts/default"
   #Redirect all old urls
   r301 %r{\A/([0-9]{4})/([0-9]{2})/([A-Za-z\-]*)/?\z}, "#{root}/$1/$2/$3.html"
   #Redirect the archive pages
