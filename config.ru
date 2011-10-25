@@ -25,10 +25,10 @@ use Rack::Rewrite do
   r301 %r{index.php}, root
   #Redirect the feed page
   r301 %r{^/feed}, "#{root}/feeds/posts/default"
+  #Redirect the archive pages
+  r301 %r{\A/([0-9]{4})/([0-9]{2})/?\z}, "#{root}/$1_$2_01_archive.html"
   #Redirect all old urls
   r301 %r{\A/([0-9]{4})/([0-9]{2})/([A-Za-z\-]*)/?\z}, "#{root}/$1/$2/$3.html"
-  #Redirect the archive pages
-  r301 %r{\A/([0-9]{4})/([0-9]{2})}, "#{root}/$1_$2_01_archive.html"
   #Redirect categories and tags to labels
   r301 %r{\A/tag/([A-Za-z\-]*)/?}, "#{root}/search/label/$1"
   r301 %r{\A/category/([A-Za-z\-]*)/?}, "#{root}/search/label/$1"
