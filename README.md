@@ -5,4 +5,4 @@ This uses rack to redirect Wordpress url's to Blogger urls.  Using Heroku with t
 
 You will just need to change config.ru to customize it for your domain.
 
-See a detailed tutorial at: http://www.chirstopherslade.com/(ADDRESS)
+See a detailed tutorial at: http://www.christopherslade.com/2011/10/migrating-from-wordpress-to-blogger.html
