@@ -13,7 +13,7 @@ use Rack::Rewrite do
   #Customize this section for your blog
   #Redirect the author page
   r301 %r{\A/authors/crslade}, root+'/p/about_21.html'
-  #Add and other URLS that might have changed here
+  #Add other URLS that might have changed here
   #for example blogger removes words like 'the', 'a' and 'with' from the url.
   r301 %r{\A/2011/09/rails-editors-and-the-command-line/?\z}, "#{root}/2011/09/rails-editors-and-command-line.html"
   r301 %r{\A/2009/03/outliers-by-malcolm-gladwell/?\z}, "#{root}/2009/03/outliers-story-of-success-by-malcolm.html"
